@@ -1,0 +1,431 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="please click more…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java面向对象">
+<meta property="og:url" content="https://xuehaodong220.github.io/2022/12/18/java%E5%9F%BA%E7%A1%80/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%BA%A7/index.html">
+<meta property="og:site_name" content="往~">
+<meta property="og:description" content="please click more…">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204114551743.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204163331194.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204164127303.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204174508972.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204175145805.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204181453065.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204181857551.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204182108402.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205152433987.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205152417529.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205152835195.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205162702474.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205162635103.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205163822156.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205165025761.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205165040569.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205170633369.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205173935824.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205175735225.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205175722627.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205182949289.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205182617002.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205183011697.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205192637248.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206123753395.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206124408615.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206130735324.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206161951122.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206163855227.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206170001321.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206170846023.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221207114327250.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221207120207034.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205221930819.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206095912873.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206101330952.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206111357846.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206112642699.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206115030886.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206115927035.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208132209719.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208142036155.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208142308606.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208142502001.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208144412576.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208144435874.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208144804294.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208145051954.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208150840387.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208150854354.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208150914773.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208152024215.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208152114778.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208152132818.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208152544533.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208153931410.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208153226302.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208155451788.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221209154533382.png">
+<meta property="article:published_time" content="2022-12-18T09:17:36.000Z">
+<meta property="article:modified_time" content="2022-12-18T10:25:49.761Z">
+<meta property="article:author" content="xhd">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204114551743.png"><title>java面向对象 | 往~</title><link ref="canonical" href="https://xuehaodong220.github.io/2022/12/18/java%E5%9F%BA%E7%A1%80/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%BA%A7/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="css/custom.css"><script src="/live2d-widget-master/autoload.js"></script><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">往~</div><div class="header-banner-info__subtitle">大家好，我是小薛</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">java面向对象</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2022-12-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2022-12-18</span></span></div></header><div class="post-body">
+        <h1 id="please-click-more…">
+          <a href="#please-click-more…" class="heading-link"><i class="fas fa-link"></i></a><a href="#please-click-more…" class="headerlink" title="please click more…"></a>please click more…</h1>
+      <span id="more"></span>
+
+        <h1 id="一、IntelliJ-IDEA">
+          <a href="#一、IntelliJ-IDEA" class="heading-link"><i class="fas fa-link"></i></a><a href="#一、IntelliJ-IDEA" class="headerlink" title="一、IntelliJ IDEA"></a>一、IntelliJ IDEA</h1>
+      
+        <h2 id="1、idea介绍">
+          <a href="#1、idea介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、idea介绍" class="headerlink" title="1、idea介绍"></a>1、idea介绍</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204114551743.png" alt="image-20221204114551743"></p>
+
+        <h2 id="2、功能介绍">
+          <a href="#2、功能介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、功能介绍" class="headerlink" title="2、功能介绍"></a>2、功能介绍</h2>
+      <p>out是编译后的.class文件，src是源文件</p>
+
+        <h2 id="3、快捷键">
+          <a href="#3、快捷键" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、快捷键" class="headerlink" title="3、快捷键"></a>3、快捷键</h2>
+      <p>ctrl + alt +backspace    　删除</p>
+<p>ctrl+r　复制</p>
+<p>alt+&#x2F;　补全代码／注释／解除注释</p>
+<p>ALT+ENTER 补全类</p>
+<p>ctrl + Alt + L 格式化代码</p>
+<p>alt+r快速运行代码</p>
+<p>alt＋insert 生成构造器</p>
+<p>ctrl+h 查看类的继承关系</p>
+<p>ctrl+b放在方法名上定位到方法</p>
+<p>.var自动分配变量名</p>
+
+        <h2 id="4、模板（太好用了）">
+          <a href="#4、模板（太好用了）" class="heading-link"><i class="fas fa-link"></i></a><a href="#4、模板（太好用了）" class="headerlink" title="4、模板（太好用了）"></a>4、模板（太好用了）</h2>
+      <p>xhd_…..</p>
+
+        <h1 id="二、包">
+          <a href="#二、包" class="heading-link"><i class="fas fa-link"></i></a><a href="#二、包" class="headerlink" title="二、包"></a>二、包</h1>
+      
+        <h2 id="1、包的作用">
+          <a href="#1、包的作用" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、包的作用" class="headerlink" title="1、包的作用"></a>1、包的作用</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204163331194.png" alt="image-20221204163331194"></p>
+
+        <h2 id="2、包的本质分析">
+          <a href="#2、包的本质分析" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、包的本质分析" class="headerlink" title="2、包的本质分析"></a>2、包的本质分析</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204164127303.png" alt="image-20221204164127303"></p>
+
+        <h2 id="3、包的命名-x2F-规范">
+          <a href="#3、包的命名-x2F-规范" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、包的命名-x2F-规范" class="headerlink" title="3、包的命名&#x2F;规范"></a>3、包的命名&#x2F;规范</h2>
+      <p>com.公司名.项目名.业务模块名</p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204174508972.png" alt="image-20221204174508972"></p>
+
+        <h2 id="4、常用的包">
+          <a href="#4、常用的包" class="heading-link"><i class="fas fa-link"></i></a><a href="#4、常用的包" class="headerlink" title="4、常用的包"></a>4、常用的包</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204175145805.png" alt="image-20221204175145805"></p>
+
+        <h2 id="5、包的注意事项">
+          <a href="#5、包的注意事项" class="heading-link"><i class="fas fa-link"></i></a><a href="#5、包的注意事项" class="headerlink" title="5、包的注意事项"></a>5、包的注意事项</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204181453065.png" alt="image-20221204181453065"></p>
+
+        <h1 id="三、访问修饰符">
+          <a href="#三、访问修饰符" class="heading-link"><i class="fas fa-link"></i></a><a href="#三、访问修饰符" class="headerlink" title="三、访问修饰符"></a>三、访问修饰符</h1>
+      
+        <h2 id="1、基本介绍">
+          <a href="#1、基本介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、基本介绍" class="headerlink" title="1、基本介绍"></a>1、基本介绍</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204181857551.png" alt="image-20221204181857551"></p>
+
+        <h2 id="2、访问范围">
+          <a href="#2、访问范围" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、访问范围" class="headerlink" title="2、访问范围"></a>2、访问范围</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221204182108402.png"></p>
+
+        <h1 id="四、封装-encapsulation重点">
+          <a href="#四、封装-encapsulation重点" class="heading-link"><i class="fas fa-link"></i></a><a href="#四、封装-encapsulation重点" class="headerlink" title="四、封装(encapsulation重点)"></a>四、封装(encapsulation重点)</h1>
+      
+        <h2 id="1、封装的理解和好处">
+          <a href="#1、封装的理解和好处" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、封装的理解和好处" class="headerlink" title="1、封装的理解和好处"></a>1、封装的理解和好处</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205152433987.png" alt="image-20221205152433987"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205152417529.png" alt="image-20221205152417529"></p>
+
+        <h2 id="2、实现步骤">
+          <a href="#2、实现步骤" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、实现步骤" class="headerlink" title="2、实现步骤"></a>2、实现步骤</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205152835195.png" alt="image-20221205152835195"></p>
+
+        <h2 id="3、快速入门">
+          <a href="#3、快速入门" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、快速入门" class="headerlink" title="3、快速入门"></a>3、快速入门</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205162702474.png" alt="image-20221205162702474"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205162635103.png" alt="image-20221205162635103"></p>
+
+        <h1 id="五、继承-extends重点">
+          <a href="#五、继承-extends重点" class="heading-link"><i class="fas fa-link"></i></a><a href="#五、继承-extends重点" class="headerlink" title="五、继承(extends重点)"></a>五、继承(extends重点)</h1>
+      
+        <h2 id="1、为什么需要继承">
+          <a href="#1、为什么需要继承" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、为什么需要继承" class="headerlink" title="1、为什么需要继承"></a>1、为什么需要继承</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205163822156.png" alt="image-20221205163822156"></p>
+
+        <h2 id="2、关系图">
+          <a href="#2、关系图" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、关系图" class="headerlink" title="2、关系图"></a>2、关系图</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205165025761.png" alt="image-20221205165025761"></p>
+
+        <h2 id="3、基本介绍">
+          <a href="#3、基本介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、基本介绍" class="headerlink" title="3、基本介绍"></a>3、基本介绍</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205165040569.png"></p>
+
+        <h2 id="4、带来的便利">
+          <a href="#4、带来的便利" class="heading-link"><i class="fas fa-link"></i></a><a href="#4、带来的便利" class="headerlink" title="4、带来的便利"></a>4、带来的便利</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205170633369.png" alt="image-20221205170633369"></p>
+
+        <h2 id="5、细节问题">
+          <a href="#5、细节问题" class="heading-link"><i class="fas fa-link"></i></a><a href="#5、细节问题" class="headerlink" title="5、细节问题"></a>5、细节问题</h2>
+      
+        <h3 id="第一点">
+          <a href="#第一点" class="heading-link"><i class="fas fa-link"></i></a><a href="#第一点" class="headerlink" title="第一点"></a>第一点</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205173935824.png" alt="image-20221205173935824"></p>
+
+        <h3 id="第二点">
+          <a href="#第二点" class="heading-link"><i class="fas fa-link"></i></a><a href="#第二点" class="headerlink" title="第二点"></a>第二点</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205175735225.png" alt="image-20221205175735225"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205175722627.png" alt="image-20221205175722627"></p>
+
+        <h3 id="第三点">
+          <a href="#第三点" class="heading-link"><i class="fas fa-link"></i></a><a href="#第三点" class="headerlink" title="第三点"></a>第三点</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205182949289.png" alt="image-20221205182949289"></p>
+
+        <h3 id="第四点">
+          <a href="#第四点" class="heading-link"><i class="fas fa-link"></i></a><a href="#第四点" class="headerlink" title="第四点"></a>第四点</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205182617002.png" alt="image-20221205182617002"></p>
+
+        <h3 id="第五点">
+          <a href="#第五点" class="heading-link"><i class="fas fa-link"></i></a><a href="#第五点" class="headerlink" title="第五点"></a>第五点</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205183011697.png" alt="image-20221205183011697"></p>
+<p>6.继承的本质：</p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205192637248.png" alt="image-20221205192637248"></p>
+
+        <h1 id="六、多态-重点">
+          <a href="#六、多态-重点" class="heading-link"><i class="fas fa-link"></i></a><a href="#六、多态-重点" class="headerlink" title="六、多态(重点)"></a>六、多态(重点)</h1>
+      
+        <h2 id="1、问题引出">
+          <a href="#1、问题引出" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、问题引出" class="headerlink" title="1、问题引出"></a>1、问题引出</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206123753395.png" alt="image-20221206123753395"></p>
+
+        <h2 id="2、基本介绍–">
+          <a href="#2、基本介绍–" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、基本介绍–" class="headerlink" title="2、基本介绍–"></a>2、基本介绍–</h2>
+      
+        <h3 id="（1）方法的多态">
+          <a href="#（1）方法的多态" class="heading-link"><i class="fas fa-link"></i></a><a href="#（1）方法的多态" class="headerlink" title="（1）方法的多态"></a>（1）方法的多态</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206124408615.png" alt="image-20221206124408615"></p>
+
+        <h3 id="（2）对象的多态（核心，困难，重点）">
+          <a href="#（2）对象的多态（核心，困难，重点）" class="heading-link"><i class="fas fa-link"></i></a><a href="#（2）对象的多态（核心，困难，重点）" class="headerlink" title="（2）对象的多态（核心，困难，重点）"></a>（2）对象的多态（核心，困难，重点）</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206130735324.png" alt="image-20221206130735324"></p>
+
+        <h3 id="（3）多态的细节讨论：向上转型">
+          <a href="#（3）多态的细节讨论：向上转型" class="heading-link"><i class="fas fa-link"></i></a><a href="#（3）多态的细节讨论：向上转型" class="headerlink" title="（3）多态的细节讨论：向上转型"></a>（3）多态的细节讨论：向上转型</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206161951122.png" alt="image-20221206161951122"></p>
+
+        <h3 id="（4）向下转型">
+          <a href="#（4）向下转型" class="heading-link"><i class="fas fa-link"></i></a><a href="#（4）向下转型" class="headerlink" title="（4）向下转型"></a>（4）向下转型</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206163855227.png" alt="image-20221206163855227"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206170001321.png" alt="image-20221206170001321"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206170846023.png" alt="image-20221206170846023"></p>
+
+        <h3 id="属性没有重写之说，看编译类型，方法看运行类型">
+          <a href="#属性没有重写之说，看编译类型，方法看运行类型" class="heading-link"><i class="fas fa-link"></i></a><a href="#属性没有重写之说，看编译类型，方法看运行类型" class="headerlink" title="属性没有重写之说，看编译类型，方法看运行类型"></a>属性没有重写之说，看编译类型，方法看运行类型</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221207114327250.png" alt="image-20221207114327250"></p>
+
+        <h2 id="3、java动态绑定机制">
+          <a href="#3、java动态绑定机制" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、java动态绑定机制" class="headerlink" title="3、java动态绑定机制"></a>3、java动态绑定机制</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221207120207034.png" alt="image-20221207120207034"></p>
+
+        <h2 id="4-多态数组（PloyArray）">
+          <a href="#4-多态数组（PloyArray）" class="heading-link"><i class="fas fa-link"></i></a><a href="#4-多态数组（PloyArray）" class="headerlink" title="4.多态数组（PloyArray）"></a>4.多态数组（PloyArray）</h2>
+      
+        <h1 id="七、Super">
+          <a href="#七、Super" class="heading-link"><i class="fas fa-link"></i></a><a href="#七、Super" class="headerlink" title="七、Super"></a>七、Super</h1>
+      
+        <h2 id="1、基本介绍-1">
+          <a href="#1、基本介绍-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、基本介绍-1" class="headerlink" title="1、基本介绍"></a>1、基本介绍</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221205221930819.png" alt="image-20221205221930819"></p>
+
+        <h2 id="2、super细节">
+          <a href="#2、super细节" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、super细节" class="headerlink" title="2、super细节"></a>2、super细节</h2>
+      
+        <h3 id="细节1、">
+          <a href="#细节1、" class="heading-link"><i class="fas fa-link"></i></a><a href="#细节1、" class="headerlink" title="细节1、"></a>细节1、</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206095912873.png" alt="image-20221206095912873"></p>
+
+        <h3 id="细节2、">
+          <a href="#细节2、" class="heading-link"><i class="fas fa-link"></i></a><a href="#细节2、" class="headerlink" title="细节2、"></a>细节2、</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206101330952.png" alt="image-20221206101330952"></p>
+
+        <h2 id="3-super和this的比较">
+          <a href="#3-super和this的比较" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-super和this的比较" class="headerlink" title="3.super和this的比较"></a>3.super和this的比较</h2>
+      <p> <img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206111357846.png" alt="image-20221206111357846"></p>
+
+        <h1 id="八、overwrite">
+          <a href="#八、overwrite" class="heading-link"><i class="fas fa-link"></i></a><a href="#八、overwrite" class="headerlink" title="八、overwrite"></a>八、overwrite</h1>
+      
+        <h2 id="1、基本介绍-2">
+          <a href="#1、基本介绍-2" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、基本介绍-2" class="headerlink" title="1、基本介绍"></a>1、基本介绍</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206112642699.png" alt="image-20221206112642699"></p>
+
+        <h2 id="2、注意事项">
+          <a href="#2、注意事项" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、注意事项" class="headerlink" title="2、注意事项"></a>2、注意事项</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206115030886.png" alt="image-20221206115030886"></p>
+
+        <h2 id="3、方法重写">
+          <a href="#3、方法重写" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、方法重写" class="headerlink" title="3、方法重写"></a>3、方法重写</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221206115927035.png" alt="image-20221206115927035"></p>
+
+        <h1 id="九、Object类详解">
+          <a href="#九、Object类详解" class="heading-link"><i class="fas fa-link"></i></a><a href="#九、Object类详解" class="headerlink" title="九、Object类详解"></a>九、Object类详解</h1>
+      
+        <h2 id="1-方法摘要">
+          <a href="#1-方法摘要" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-方法摘要" class="headerlink" title="1.方法摘要"></a>1.方法摘要</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208132209719.png" alt="image-20221208132209719"></p>
+
+        <h2 id="2-equals方法">
+          <a href="#2-equals方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-equals方法" class="headerlink" title="2.equals方法"></a>2.equals方法</h2>
+      
+        <h3 id="1-Object类的equals的源码">
+          <a href="#1-Object类的equals的源码" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-Object类的equals的源码" class="headerlink" title="1.Object类的equals的源码"></a>1.Object类的equals的源码</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208142036155.png" alt="image-20221208142036155"></p>
+
+        <h3 id="2-String类的equals的源码">
+          <a href="#2-String类的equals的源码" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-String类的equals的源码" class="headerlink" title="2.String类的equals的源码"></a>2.String类的equals的源码</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208142308606.png" alt="image-20221208142308606"></p>
+
+        <h3 id="3-Integer类的equals的源码">
+          <a href="#3-Integer类的equals的源码" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-Integer类的equals的源码" class="headerlink" title="3.Integer类的equals的源码"></a>3.Integer类的equals的源码</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208142502001.png" alt="image-20221208142502001"></p>
+
+        <h2 id="3-重写equals方法">
+          <a href="#3-重写equals方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-重写equals方法" class="headerlink" title="3.重写equals方法"></a>3.重写equals方法</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208144412576.png" alt="image-20221208144412576"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208144435874.png" alt="image-20221208144435874"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208144804294.png" alt="image-20221208144804294"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208145051954.png" alt="image-20221208145051954"></p>
+
+        <h2 id="4-tostring">
+          <a href="#4-tostring" class="heading-link"><i class="fas fa-link"></i></a><a href="#4-tostring" class="headerlink" title="4.tostring()"></a>4.tostring()</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208150840387.png" alt="image-20221208150840387"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208150854354.png" alt="image-20221208150854354"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208150914773.png" alt="image-20221208150914773"></p>
+
+        <h2 id="5-finalize方法">
+          <a href="#5-finalize方法" class="heading-link"><i class="fas fa-link"></i></a><a href="#5-finalize方法" class="headerlink" title="5.finalize方法"></a>5.finalize方法</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208152024215.png" alt="image-20221208152024215"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208152114778.png" alt="image-20221208152114778"></p>
+<p>执行的结果可以看作多线程并发</p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208152132818.png" alt="image-20221208152132818"></p>
+
+        <h1 id="十、断点调试">
+          <a href="#十、断点调试" class="heading-link"><i class="fas fa-link"></i></a><a href="#十、断点调试" class="headerlink" title="十、断点调试"></a>十、断点调试</h1>
+      
+        <h2 id="1-实际需求-介绍">
+          <a href="#1-实际需求-介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-实际需求-介绍" class="headerlink" title="1.实际需求+介绍"></a>1.实际需求+介绍</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208152544533.png" alt="image-20221208152544533"></p>
+
+        <h2 id="2-快捷键">
+          <a href="#2-快捷键" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-快捷键" class="headerlink" title="2.快捷键"></a>2.快捷键</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208153931410.png" alt="image-20221208153931410"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208153226302.png" alt="image-20221208153226302"></p>
+
+        <h2 id="3-案例">
+          <a href="#3-案例" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-案例" class="headerlink" title="3.案例"></a>3.案例</h2>
+      
+        <h3 id="1-追踪源码">
+          <a href="#1-追踪源码" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-追踪源码" class="headerlink" title="1.追踪源码"></a>1.追踪源码</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221208155451788.png" alt="image-20221208155451788"></p>
+
+        <h3 id="2-房屋出租系统模式设计">
+          <a href="#2-房屋出租系统模式设计" class="heading-link"><i class="fas fa-link"></i></a><a href="#2-房屋出租系统模式设计" class="headerlink" title="2.房屋出租系统模式设计"></a>2.房屋出租系统模式设计</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221209154533382.png" alt="image-20221209154533382"></p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://XueHaodong220.github.io">xhd</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://xuehaodong220.github.io/2022/12/18/java%E5%9F%BA%E7%A1%80/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%BA%A7/">https://xuehaodong220.github.io/2022/12/18/java%E5%9F%BA%E7%A1%80/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%BA%A7/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://xuehaodong220.github.io/tags/java/">java</a></span></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2022/12/18/java%E5%9F%BA%E7%A1%80/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">java面向对象高级</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2022/11/28/java%E5%9F%BA%E7%A1%80/My-first-blog/"><span class="paginator-prev__text">My first blog</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#please-click-more%E2%80%A6"><span class="toc-number">1.</span> <span class="toc-text">
+          please click more…</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81IntelliJ-IDEA"><span class="toc-number">2.</span> <span class="toc-text">
+          一、IntelliJ IDEA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81idea%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.1.</span> <span class="toc-text">
+          1、idea介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.2.</span> <span class="toc-text">
+          2、功能介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">2.3.</span> <span class="toc-text">
+          3、快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%A8%A1%E6%9D%BF%EF%BC%88%E5%A4%AA%E5%A5%BD%E7%94%A8%E4%BA%86%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">
+          4、模板（太好用了）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%8C%85"><span class="toc-number">3.</span> <span class="toc-text">
+          二、包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%8C%85%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">3.1.</span> <span class="toc-text">
+          1、包的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%8C%85%E7%9A%84%E6%9C%AC%E8%B4%A8%E5%88%86%E6%9E%90"><span class="toc-number">3.2.</span> <span class="toc-text">
+          2、包的本质分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%8C%85%E7%9A%84%E5%91%BD%E5%90%8D-x2F-%E8%A7%84%E8%8C%83"><span class="toc-number">3.3.</span> <span class="toc-text">
+          3、包的命名&#x2F;规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8C%85"><span class="toc-number">3.4.</span> <span class="toc-text">
+          4、常用的包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E5%8C%85%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.5.</span> <span class="toc-text">
+          5、包的注意事项</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="toc-number">4.</span> <span class="toc-text">
+          三、访问修饰符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-number">4.1.</span> <span class="toc-text">
+          1、基本介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E8%AE%BF%E9%97%AE%E8%8C%83%E5%9B%B4"><span class="toc-number">4.2.</span> <span class="toc-text">
+          2、访问范围</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%B0%81%E8%A3%85-encapsulation%E9%87%8D%E7%82%B9"><span class="toc-number">5.</span> <span class="toc-text">
+          四、封装(encapsulation重点)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%B0%81%E8%A3%85%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E5%A5%BD%E5%A4%84"><span class="toc-number">5.1.</span> <span class="toc-text">
+          1、封装的理解和好处</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="toc-number">5.2.</span> <span class="toc-text">
+          2、实现步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-number">5.3.</span> <span class="toc-text">
+          3、快速入门</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%BB%A7%E6%89%BF-extends%E9%87%8D%E7%82%B9"><span class="toc-number">6.</span> <span class="toc-text">
+          五、继承(extends重点)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E7%BB%A7%E6%89%BF"><span class="toc-number">6.1.</span> <span class="toc-text">
+          1、为什么需要继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%85%B3%E7%B3%BB%E5%9B%BE"><span class="toc-number">6.2.</span> <span class="toc-text">
+          2、关系图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-number">6.3.</span> <span class="toc-text">
+          3、基本介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E5%B8%A6%E6%9D%A5%E7%9A%84%E4%BE%BF%E5%88%A9"><span class="toc-number">6.4.</span> <span class="toc-text">
+          4、带来的便利</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E7%BB%86%E8%8A%82%E9%97%AE%E9%A2%98"><span class="toc-number">6.5.</span> <span class="toc-text">
+          5、细节问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%82%B9"><span class="toc-number">6.5.1.</span> <span class="toc-text">
+          第一点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%82%B9"><span class="toc-number">6.5.2.</span> <span class="toc-text">
+          第二点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%82%B9"><span class="toc-number">6.5.3.</span> <span class="toc-text">
+          第三点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%82%B9"><span class="toc-number">6.5.4.</span> <span class="toc-text">
+          第四点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%82%B9"><span class="toc-number">6.5.5.</span> <span class="toc-text">
+          第五点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%A4%9A%E6%80%81-%E9%87%8D%E7%82%B9"><span class="toc-number">7.</span> <span class="toc-text">
+          六、多态(重点)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E9%97%AE%E9%A2%98%E5%BC%95%E5%87%BA"><span class="toc-number">7.1.</span> <span class="toc-text">
+          1、问题引出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D%E2%80%93"><span class="toc-number">7.2.</span> <span class="toc-text">
+          2、基本介绍–</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E6%96%B9%E6%B3%95%E7%9A%84%E5%A4%9A%E6%80%81"><span class="toc-number">7.2.1.</span> <span class="toc-text">
+          （1）方法的多态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%882%EF%BC%89%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%9A%E6%80%81%EF%BC%88%E6%A0%B8%E5%BF%83%EF%BC%8C%E5%9B%B0%E9%9A%BE%EF%BC%8C%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-number">7.2.2.</span> <span class="toc-text">
+          （2）对象的多态（核心，困难，重点）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%883%EF%BC%89%E5%A4%9A%E6%80%81%E7%9A%84%E7%BB%86%E8%8A%82%E8%AE%A8%E8%AE%BA%EF%BC%9A%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B"><span class="toc-number">7.2.3.</span> <span class="toc-text">
+          （3）多态的细节讨论：向上转型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%884%EF%BC%89%E5%90%91%E4%B8%8B%E8%BD%AC%E5%9E%8B"><span class="toc-number">7.2.4.</span> <span class="toc-text">
+          （4）向下转型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7%E6%B2%A1%E6%9C%89%E9%87%8D%E5%86%99%E4%B9%8B%E8%AF%B4%EF%BC%8C%E7%9C%8B%E7%BC%96%E8%AF%91%E7%B1%BB%E5%9E%8B%EF%BC%8C%E6%96%B9%E6%B3%95%E7%9C%8B%E8%BF%90%E8%A1%8C%E7%B1%BB%E5%9E%8B"><span class="toc-number">7.2.5.</span> <span class="toc-text">
+          属性没有重写之说，看编译类型，方法看运行类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81java%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A%E6%9C%BA%E5%88%B6"><span class="toc-number">7.3.</span> <span class="toc-text">
+          3、java动态绑定机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%A4%9A%E6%80%81%E6%95%B0%E7%BB%84%EF%BC%88PloyArray%EF%BC%89"><span class="toc-number">7.4.</span> <span class="toc-text">
+          4.多态数组（PloyArray）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83%E3%80%81Super"><span class="toc-number">8.</span> <span class="toc-text">
+          七、Super</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D-1"><span class="toc-number">8.1.</span> <span class="toc-text">
+          1、基本介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81super%E7%BB%86%E8%8A%82"><span class="toc-number">8.2.</span> <span class="toc-text">
+          2、super细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%86%E8%8A%821%E3%80%81"><span class="toc-number">8.2.1.</span> <span class="toc-text">
+          细节1、</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%86%E8%8A%822%E3%80%81"><span class="toc-number">8.2.2.</span> <span class="toc-text">
+          细节2、</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-super%E5%92%8Cthis%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-number">8.3.</span> <span class="toc-text">
+          3.super和this的比较</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB%E3%80%81overwrite"><span class="toc-number">9.</span> <span class="toc-text">
+          八、overwrite</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D-2"><span class="toc-number">9.1.</span> <span class="toc-text">
+          1、基本介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">9.2.</span> <span class="toc-text">
+          2、注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99"><span class="toc-number">9.3.</span> <span class="toc-text">
+          3、方法重写</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D%E3%80%81Object%E7%B1%BB%E8%AF%A6%E8%A7%A3"><span class="toc-number">10.</span> <span class="toc-text">
+          九、Object类详解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%96%B9%E6%B3%95%E6%91%98%E8%A6%81"><span class="toc-number">10.1.</span> <span class="toc-text">
+          1.方法摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-equals%E6%96%B9%E6%B3%95"><span class="toc-number">10.2.</span> <span class="toc-text">
+          2.equals方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Object%E7%B1%BB%E7%9A%84equals%E7%9A%84%E6%BA%90%E7%A0%81"><span class="toc-number">10.2.1.</span> <span class="toc-text">
+          1.Object类的equals的源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-String%E7%B1%BB%E7%9A%84equals%E7%9A%84%E6%BA%90%E7%A0%81"><span class="toc-number">10.2.2.</span> <span class="toc-text">
+          2.String类的equals的源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Integer%E7%B1%BB%E7%9A%84equals%E7%9A%84%E6%BA%90%E7%A0%81"><span class="toc-number">10.2.3.</span> <span class="toc-text">
+          3.Integer类的equals的源码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%87%8D%E5%86%99equals%E6%96%B9%E6%B3%95"><span class="toc-number">10.3.</span> <span class="toc-text">
+          3.重写equals方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-tostring"><span class="toc-number">10.4.</span> <span class="toc-text">
+          4.tostring()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-finalize%E6%96%B9%E6%B3%95"><span class="toc-number">10.5.</span> <span class="toc-text">
+          5.finalize方法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95"><span class="toc-number">11.</span> <span class="toc-text">
+          十、断点调试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%9E%E9%99%85%E9%9C%80%E6%B1%82-%E4%BB%8B%E7%BB%8D"><span class="toc-number">11.1.</span> <span class="toc-text">
+          1.实际需求+介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">11.2.</span> <span class="toc-text">
+          2.快捷键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%A1%88%E4%BE%8B"><span class="toc-number">11.3.</span> <span class="toc-text">
+          3.案例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%BD%E8%B8%AA%E6%BA%90%E7%A0%81"><span class="toc-number">11.3.1.</span> <span class="toc-text">
+          1.追踪源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%88%BF%E5%B1%8B%E5%87%BA%E7%A7%9F%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%BC%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">11.3.2.</span> <span class="toc-text">
+          2.房屋出租系统模式设计</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/assets/avatar.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">终于等到你...</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>xhd</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>

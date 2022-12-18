@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.8.0" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.8.0" type="image/png" sizes="32x32"><meta name="description" content="异常-Exception">
+<meta property="og:type" content="article">
+<meta property="og:title" content="异常-Exception">
+<meta property="og:url" content="https://xuehaodong220.github.io/2022/12/18/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8-Exception/index.html">
+<meta property="og:site_name" content="往~">
+<meta property="og:description" content="异常-Exception">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215115321859.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215120751640.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215120831837.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215121254467.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215121409093.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215121654551.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215121715677.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215121942027.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215122450595.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215122712618.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215123037371.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215124238056.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215124350757.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215124623571.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215151048045.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215150615771.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215151008574.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215154113655.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215154358794.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215124516969.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215124424000.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215210234691.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215211943926.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215212041640.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215212024269.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215213429916.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215220045318.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215222055860.png">
+<meta property="og:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215222625481.png">
+<meta property="article:published_time" content="2022-12-18T09:35:49.000Z">
+<meta property="article:modified_time" content="2022-12-18T10:21:42.995Z">
+<meta property="article:author" content="xhd">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xuehaodong220.github.io/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215115321859.png"><title>异常-Exception | 往~</title><link ref="canonical" href="https://xuehaodong220.github.io/2022/12/18/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8-Exception/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.8.0"><link rel="stylesheet" href="css/custom.css"><script src="/live2d-widget-master/autoload.js"></script><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">分类</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/tags/"><span class="header-nav-menu-item__icon"><i class="fas fa-tags"></i></span><span class="header-nav-menu-item__text">标签</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">往~</div><div class="header-banner-info__subtitle">大家好，我是小薛</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">异常-Exception</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon" data-popover="发表时间" data-popover-pos="up"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__value">2022-12-18</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon" data-popover="修改时间" data-popover-pos="up"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__value">2022-12-18</span></span></div></header><div class="post-body">
+        <h1 id="异常-Exception">
+          <a href="#异常-Exception" class="heading-link"><i class="fas fa-link"></i></a><a href="#异常-Exception" class="headerlink" title="异常-Exception"></a>异常-Exception</h1>
+      
+        <h1 id="一、异常的概念">
+          <a href="#一、异常的概念" class="heading-link"><i class="fas fa-link"></i></a><a href="#一、异常的概念" class="headerlink" title="一、异常的概念"></a>一、异常的概念</h1>
+      
+        <h2 id="1、异常介绍">
+          <a href="#1、异常介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、异常介绍" class="headerlink" title="1、异常介绍"></a>1、异常介绍</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215115321859.png" alt="image-20221215115321859"></p>
+
+        <h1 id="二、异常体系图-重点">
+          <a href="#二、异常体系图-重点" class="heading-link"><i class="fas fa-link"></i></a><a href="#二、异常体系图-重点" class="headerlink" title="二、异常体系图(重点)"></a>二、异常体系图(重点)</h1>
+      
+        <h2 id="1、类的继承关系图">
+          <a href="#1、类的继承关系图" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、类的继承关系图" class="headerlink" title="1、类的继承关系图"></a>1、类的继承关系图</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215120751640.png" alt="image-20221215120751640"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215120831837.png"></p>
+
+        <h2 id="2、小结">
+          <a href="#2、小结" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、小结" class="headerlink" title="2、小结"></a>2、小结</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215121254467.png" alt="image-20221215121254467"></p>
+
+        <h1 id="三、常见的异常">
+          <a href="#三、常见的异常" class="heading-link"><i class="fas fa-link"></i></a><a href="#三、常见的异常" class="headerlink" title="三、常见的异常"></a>三、常见的异常</h1>
+      
+        <h2 id="1-常见的运行时异常">
+          <a href="#1-常见的运行时异常" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-常见的运行时异常" class="headerlink" title="1.常见的运行时异常"></a>1.常见的运行时异常</h2>
+      
+        <h3 id="1、空指针异常">
+          <a href="#1、空指针异常" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、空指针异常" class="headerlink" title="1、空指针异常"></a>1、空指针异常</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215121409093.png" alt="image-20221215121409093"></p>
+
+        <h3 id="2、数学运算异常">
+          <a href="#2、数学运算异常" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、数学运算异常" class="headerlink" title="2、数学运算异常"></a>2、数学运算异常</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215121654551.png" alt="image-20221215121654551"></p>
+
+        <h3 id="3、数组下标越界异常">
+          <a href="#3、数组下标越界异常" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、数组下标越界异常" class="headerlink" title="3、数组下标越界异常"></a>3、数组下标越界异常</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215121715677.png" alt="image-20221215121715677"></p>
+
+        <h3 id="4、类型转换异常">
+          <a href="#4、类型转换异常" class="heading-link"><i class="fas fa-link"></i></a><a href="#4、类型转换异常" class="headerlink" title="4、类型转换异常"></a>4、类型转换异常</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215121942027.png" alt="image-20221215121942027"></p>
+
+        <h3 id="5、数字格式不正确异常">
+          <a href="#5、数字格式不正确异常" class="heading-link"><i class="fas fa-link"></i></a><a href="#5、数字格式不正确异常" class="headerlink" title="5、数字格式不正确异常"></a>5、数字格式不正确异常</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215122450595.png" alt="image-20221215122450595"></p>
+
+        <h2 id="2、编译异常">
+          <a href="#2、编译异常" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、编译异常" class="headerlink" title="2、编译异常"></a>2、编译异常</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215122712618.png" alt="image-20221215122712618"></p>
+
+        <h2 id="3-异常练习">
+          <a href="#3-异常练习" class="heading-link"><i class="fas fa-link"></i></a><a href="#3-异常练习" class="headerlink" title="3.异常练习"></a>3.异常练习</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215123037371.png" alt="image-20221215123037371"></p>
+
+        <h1 id="四、异常的处理-重点）">
+          <a href="#四、异常的处理-重点）" class="heading-link"><i class="fas fa-link"></i></a><a href="#四、异常的处理-重点）" class="headerlink" title="四、异常的处理(重点）"></a>四、异常的处理(重点）</h1>
+      
+        <h2 id="1、基本介绍">
+          <a href="#1、基本介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、基本介绍" class="headerlink" title="1、基本介绍"></a>1、基本介绍</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215124238056.png" alt="image-20221215124238056"></p>
+
+        <h2 id="2、try-catch-finally">
+          <a href="#2、try-catch-finally" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、try-catch-finally" class="headerlink" title="2、try-catch-finally"></a>2、try-catch-finally</h2>
+      
+        <h3 id="1、流程图">
+          <a href="#1、流程图" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、流程图" class="headerlink" title="1、流程图"></a>1、流程图</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215124350757.png" alt="image-20221215124350757"></p>
+
+        <h3 id="2、说明">
+          <a href="#2、说明" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、说明" class="headerlink" title="2、说明"></a>2、说明</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215124623571.png" alt="image-20221215124623571"></p>
+
+        <h3 id="3、注意事项">
+          <a href="#3、注意事项" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、注意事项" class="headerlink" title="3、注意事项"></a>3、注意事项</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215151048045.png" alt="image-20221215151048045"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215150615771.png" alt="image-20221215150615771"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215151008574.png" alt="image-20221215151008574"></p>
+
+        <h3 id="4、案例">
+          <a href="#4、案例" class="heading-link"><i class="fas fa-link"></i></a><a href="#4、案例" class="headerlink" title="4、案例"></a>4、案例</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215154113655.png" alt="image-20221215154113655"></p>
+<p>5、总结</p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215154358794.png" alt="image-20221215154358794"></p>
+
+        <h2 id="3、throws">
+          <a href="#3、throws" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、throws" class="headerlink" title="3、throws"></a>3、throws</h2>
+      
+        <h3 id="1、流程图-1">
+          <a href="#1、流程图-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、流程图-1" class="headerlink" title="1、流程图"></a>1、流程图</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215124516969.png" alt="image-20221215124516969"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215124424000.png" alt="image-20221215124424000"></p>
+
+        <h3 id="2、基本介绍">
+          <a href="#2、基本介绍" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、基本介绍" class="headerlink" title="2、基本介绍"></a>2、基本介绍</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215210234691.png" alt="image-20221215210234691"></p>
+
+        <h3 id="3、注意事项-1">
+          <a href="#3、注意事项-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、注意事项-1" class="headerlink" title="3、注意事项"></a>3、注意事项</h3>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215211943926.png" alt="image-20221215211943926"></p>
+
+        <h1 id="五、自定义异常">
+          <a href="#五、自定义异常" class="heading-link"><i class="fas fa-link"></i></a><a href="#五、自定义异常" class="headerlink" title="五、自定义异常"></a>五、自定义异常</h1>
+      
+        <h2 id="1、基本介绍-1">
+          <a href="#1、基本介绍-1" class="heading-link"><i class="fas fa-link"></i></a><a href="#1、基本介绍-1" class="headerlink" title="1、基本介绍"></a>1、基本介绍</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215212041640.png" alt="image-20221215212041640"></p>
+
+        <h2 id="2、步骤">
+          <a href="#2、步骤" class="heading-link"><i class="fas fa-link"></i></a><a href="#2、步骤" class="headerlink" title="2、步骤"></a>2、步骤</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215212024269.png" alt="image-20221215212024269"></p>
+
+        <h2 id="3、实例">
+          <a href="#3、实例" class="heading-link"><i class="fas fa-link"></i></a><a href="#3、实例" class="headerlink" title="3、实例"></a>3、实例</h2>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215213429916.png" alt="image-20221215213429916"></p>
+
+        <h1 id="六、throw和throws的对比">
+          <a href="#六、throw和throws的对比" class="heading-link"><i class="fas fa-link"></i></a><a href="#六、throw和throws的对比" class="headerlink" title="六、throw和throws的对比"></a>六、throw和throws的对比</h1>
+      <p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215220045318.png" alt="image-20221215220045318"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215222055860.png" alt="image-20221215222055860"></p>
+<p><img src="/assets/java%E7%AC%94%E8%AE%B0_images/image-20221215222625481.png" alt="image-20221215222625481"></p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="https://XueHaodong220.github.io">xhd</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="https://xuehaodong220.github.io/2022/12/18/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8-Exception/">https://xuehaodong220.github.io/2022/12/18/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8-Exception/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="https://xuehaodong220.github.io/tags/java/">java</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2022/12/18/java%E5%9F%BA%E7%A1%80/java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E9%AB%98%E7%BA%A7/"><span class="paginator-prev__text">java面向对象高级</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8-Exception"><span class="toc-number">1.</span> <span class="toc-text">
+          异常-Exception</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BC%82%E5%B8%B8%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-number">2.</span> <span class="toc-text">
+          一、异常的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%BC%82%E5%B8%B8%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.1.</span> <span class="toc-text">
+          1、异常介绍</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB%E5%9B%BE-%E9%87%8D%E7%82%B9"><span class="toc-number">3.</span> <span class="toc-text">
+          二、异常体系图(重点)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB%E5%9B%BE"><span class="toc-number">3.1.</span> <span class="toc-text">
+          1、类的继承关系图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%B0%8F%E7%BB%93"><span class="toc-number">3.2.</span> <span class="toc-text">
+          2、小结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%82%E5%B8%B8"><span class="toc-number">4.</span> <span class="toc-text">
+          三、常见的异常</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%B8%B8%E8%A7%81%E7%9A%84%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BC%82%E5%B8%B8"><span class="toc-number">4.1.</span> <span class="toc-text">
+          1.常见的运行时异常</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8"><span class="toc-number">4.1.1.</span> <span class="toc-text">
+          1、空指针异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E5%BC%82%E5%B8%B8"><span class="toc-number">4.1.2.</span> <span class="toc-text">
+          2、数学运算异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%95%B0%E7%BB%84%E4%B8%8B%E6%A0%87%E8%B6%8A%E7%95%8C%E5%BC%82%E5%B8%B8"><span class="toc-number">4.1.3.</span> <span class="toc-text">
+          3、数组下标越界异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E5%BC%82%E5%B8%B8"><span class="toc-number">4.1.4.</span> <span class="toc-text">
+          4、类型转换异常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F%E4%B8%8D%E6%AD%A3%E7%A1%AE%E5%BC%82%E5%B8%B8"><span class="toc-number">4.1.5.</span> <span class="toc-text">
+          5、数字格式不正确异常</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E7%BC%96%E8%AF%91%E5%BC%82%E5%B8%B8"><span class="toc-number">4.2.</span> <span class="toc-text">
+          2、编译异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BC%82%E5%B8%B8%E7%BB%83%E4%B9%A0"><span class="toc-number">4.3.</span> <span class="toc-text">
+          3.异常练习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%BC%82%E5%B8%B8%E7%9A%84%E5%A4%84%E7%90%86-%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">
+          四、异常的处理(重点）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-number">5.1.</span> <span class="toc-text">
+          1、基本介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81try-catch-finally"><span class="toc-number">5.2.</span> <span class="toc-text">
+          2、try-catch-finally</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">5.2.1.</span> <span class="toc-text">
+          1、流程图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E8%AF%B4%E6%98%8E"><span class="toc-number">5.2.2.</span> <span class="toc-text">
+          2、说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">5.2.3.</span> <span class="toc-text">
+          3、注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%A1%88%E4%BE%8B"><span class="toc-number">5.2.4.</span> <span class="toc-text">
+          4、案例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81throws"><span class="toc-number">5.3.</span> <span class="toc-text">
+          3、throws</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%B5%81%E7%A8%8B%E5%9B%BE-1"><span class="toc-number">5.3.1.</span> <span class="toc-text">
+          1、流程图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="toc-number">5.3.2.</span> <span class="toc-text">
+          2、基本介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="toc-number">5.3.3.</span> <span class="toc-text">
+          3、注意事项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="toc-number">6.</span> <span class="toc-text">
+          五、自定义异常</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D-1"><span class="toc-number">6.1.</span> <span class="toc-text">
+          1、基本介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%AD%A5%E9%AA%A4"><span class="toc-number">6.2.</span> <span class="toc-text">
+          2、步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%AE%9E%E4%BE%8B"><span class="toc-number">6.3.</span> <span class="toc-text">
+          3、实例</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81throw%E5%92%8Cthrows%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">7.</span> <span class="toc-text">
+          六、throw和throws的对比</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/assets/avatar.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">终于等到你...</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">归档</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">分类</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--tags" href="/tags/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">标签</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>xhd</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.8.0"></script><script src="/js/stun-boot.js?v=2.8.0"></script><script src="/js/scroll.js?v=2.8.0"></script><script src="/js/header.js?v=2.8.0"></script><script src="/js/sidebar.js?v=2.8.0"></script></body></html>
